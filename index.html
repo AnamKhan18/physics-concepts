@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physics Concepts - Scilab</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #d7eaff, #f7faff);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #0055cc;
+      color: white;
+      padding: 20px;
+      border-bottom: 4px solid #003d99;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    .container {
+      margin: 40px auto;
+      max-width: 800px;
+    }
+    .button {
+      display: inline-block;
+      margin: 15px;
+      padding: 12px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #0073e6;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background-color: #005bb5;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      display: none;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background-color: #0055cc;
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Physics Concepts (Scilab)</h1>
+    <p>by Anam Khan</p>
+  </header>
+
+  <div class="container">
+    <h2>Wave Plots</h2>
+
+    <button class="button" onclick="showPlot('wave_function')">Wave Function</button>
+    <button class="button" onclick="showPlot('wave_packet')">Wave Packet</button>
+    <button class="button" onclick="hideAll()">Hide All</button>
+<br>
+<a href="wave_function.sce" class="button" download>Download Wave Function Code</a>
+<a href="wave_packet.sce" class="button" download>Download Wave Packet Code</a>
+
+
+    <div>
+      <img id="wave_function" src="wave_function.png" alt="Wave Function Plot">
+      <img id="wave_packet" src="wave_packet.png" alt="Wave Packet Plot">
+    </div>
+  </div>
+
+  <footer>
+    <p>Created using Scilab | © 2025 Anam Khan</p>
+  </footer>
+
+  <script>
+    function showPlot(id) {
+      document.getElementById("wave_function").style.display = "none";
+      document.getElementById("wave_packet").style.display = "none";
+      document.getElementById(id).style.display = "block";
+    }
+    function hideAll() {
+      document.getElementById("wave_function").style.display = "none";
+      document.getElementById("wave_packet").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
